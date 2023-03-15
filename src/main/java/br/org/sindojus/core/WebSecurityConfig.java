@@ -28,6 +28,8 @@ public class WebSecurityConfig {//extends WebSecurityConfigurerAdapter{
 				.and().authorizeRequests()
 				.antMatchers(HttpMethod.POST, "/login").permitAll()
 				.antMatchers(HttpMethod.GET, "/noticias").permitAll()
+				.antMatchers(HttpMethod.GET, "/noticias/{noticiaId}").permitAll()
+				.antMatchers(HttpMethod.GET, "/noticias/{noticiaId}/foto").permitAll()
 				.anyRequest().authenticated()
 				//passar o filtro securityFilter antes do filto do spring UsernamePasswordAuthenticationFilter
 				.and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
