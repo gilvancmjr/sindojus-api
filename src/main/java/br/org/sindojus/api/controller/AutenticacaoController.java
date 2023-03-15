@@ -33,5 +33,8 @@ public class AutenticacaoController {
         TokenUsuarioDto tokenUsuarioDto = new TokenUsuarioDto();
         tokenUsuarioDto.setToken(tokenJWT);
         return ResponseEntity.ok(tokenUsuarioDto);
+
+
+
     }
 }
