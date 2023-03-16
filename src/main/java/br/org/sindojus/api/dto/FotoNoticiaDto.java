@@ -22,4 +22,5 @@ public class FotoNoticiaDto {
         this.tamanho = fotoNoticia.getTamanho();
         this.noticia = fotoNoticia.getNoticia();
     }
+    
 }
