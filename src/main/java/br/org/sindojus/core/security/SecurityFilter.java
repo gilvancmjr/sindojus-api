@@ -1,4 +1,4 @@
-package br.org.sindojus.core;
+package br.org.sindojus.core.security;
 
 import br.org.sindojus.domain.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;

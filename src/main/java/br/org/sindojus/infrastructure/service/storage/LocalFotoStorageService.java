@@ -4,7 +4,8 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import org.springframework.beans.factory.annotation.Value;
+import br.org.sindojus.core.storage.StorageProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
 
@@ -14,8 +15,11 @@ import br.org.sindojus.domain.service.FotoStorageSevice;
 public class LocalFotoStorageService implements  FotoStorageSevice{
     
 
-    @Value("${sindojus.storage.local.diretorio-fotos}")
-	private Path diretorioFotos;
+//    @Value("${sindojus.storage.local.diretorio-fotos}")
+//	private Path diretorioFotos;
+
+    @Autowired
+    private StorageProperties storageProperties;
 
     @Override
     public void armazenar(NovaFoto novaFoto){
@@ -47,9 +51,9 @@ public class LocalFotoStorageService implements  FotoStorageSevice{
         } catch (Exception e) {
             throw new StorageException("Não foi possível recuperar arquivo.", e);
         }
-    } 
-    private Path getArquivoPath(String nomeArquivo){
-        return diretorioFotos.resolve(Path.of(nomeArquivo));
+    }
 
+    private Path getArquivoPath(String nomeArquivo) {
+        return storageProperties.getLocal().getDiretorioFotos().resolve(Path.of(nomeArquivo));
     }
 }

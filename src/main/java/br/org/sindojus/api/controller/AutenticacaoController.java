@@ -2,7 +2,7 @@ package br.org.sindojus.api.controller;
 
 import br.org.sindojus.api.dto.TokenUsuarioDto;
 import br.org.sindojus.api.dto.form.AutenticacaoForm;
-import br.org.sindojus.core.TokenService;
+import br.org.sindojus.core.security.TokenService;
 import br.org.sindojus.domain.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
