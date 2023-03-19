@@ -15,7 +15,6 @@ import br.org.sindojus.domain.service.FotoStorageSevice.NovaFoto;
 @Service
 public class CatalogoFotoProdutoService {
 
-    private String tipoFotoNoticia = "noticia";
     @Autowired
     private NoticiaFotoRepository noticiaFotoRepository;
 
