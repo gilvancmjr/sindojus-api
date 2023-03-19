@@ -14,4 +14,7 @@ INSERT INTO noticia (titulo, descricao) VALUES
 
 INSERT INTO usuario (id, login, senha) VALUES
 (1,'diretor','$2a$10$Y50UaMFOxteibQEYLrwuHeehHYfcoafCopUazP12.rqB41bsolF5.'),
-(2,'Nemesio','$2a$10$Y50UaMFOxteibQEYLrwuHeehHYfcoafCopUazP12.rqB41bsolF5.')
+(2,'Nemesio','$2a$10$Y50UaMFOxteibQEYLrwuHeehHYfcoafCopUazP12.rqB41bsolF5.');
+
+INSERT INTO parceiro (titulo, descricao) VALUES
+('Clínica Endócrinos', 'O SINDOJUS/PI, vem anunciar a confirmação do convênio com a Clínica Endócrinos, onde serão ofertados serviços com profissionais super qualificados e de referência com descontos que vale de 15% à 42% nas consultas realizadas pelos seguintes médicos e nutricionistas: 1 - Dr. Allan Sobral - Clínico Geral e Endocrinologista. 2 - Dr. Wallace Miranda - Clínico Geral e Endocrinologista. 3 - Dra. Carla Riama Dermatologista (Adulto e Infantil). 4 - Nutricionista Fabricia Esp. Materno Infantil (atende até 15 anos). 5 - Nutricionista Wilderlane - Clínica Comportamental e Esportiva. 6 - Dr. Rafael Holanda Psiquiatra (atende todas as idades). 7 - PsicoÌloga Julia Soares - Esp. Terapia Cognitiva Comportamental e Psicologia Escolar. Mais informacÌ§oÌƒes na sede do nosso sindicato ou pelo telefone: 86 3085-4635. Agende jaÌ sua consulta!! EdifiÌcio JoseÌ Nabuco de Melo, situado na Av Homero Castelo Branco, n Â° 2655, sala 203  http://www.clinicaendocrinos.com.br/site/');

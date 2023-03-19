@@ -15,7 +15,7 @@ import br.org.sindojus.domain.service.FotoStorageSevice.NovaFoto;
 @Service
 public class CatalogoFotoProdutoService {
 
-    
+    private String tipoFotoNoticia = "noticia";
     @Autowired
     private NoticiaFotoRepository noticiaFotoRepository;
 
@@ -45,7 +45,7 @@ public class CatalogoFotoProdutoService {
             .nomeArquivo(nomeNovoArquivo)
             .inputStream(dadosArquivo).build();
 
-        fotoStorageSevice.substituir(nomeArquivoExistente, novaFoto);
+        fotoStorageSevice.substituir(nomeArquivoExistente, novaFoto, "noticia");
         return fotoNoticia;
         
     }

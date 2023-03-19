@@ -63,7 +63,7 @@ public class NotificaFotoController {
 		try {
             FotoNoticia fotoNoticia = catalogoFotoProdutoService.buscarOuFalhar(noticiaId);
 			
-			InputStream inputStream = fotoStorage.recuperar(fotoNoticia.getNomeArquivo());
+			InputStream inputStream = fotoStorage.recuperar(fotoNoticia.getNomeArquivo(), "noticia");
 			
 			return ResponseEntity.ok()
 					.contentType(MediaType.IMAGE_JPEG)

@@ -8,23 +8,23 @@ import lombok.Getter;
 
 public interface FotoStorageSevice {
 
-    void armazenar(NovaFoto novaFoto);
+    void armazenar(NovaFoto novaFoto, String tipoEntidade);
 
     default String gerarNomeArquivo(String nomeOriginal){
         return UUID.randomUUID().toString() + "_" + nomeOriginal;
     }
 
-    void remover(String nomeArquivo);
+    void remover(String nomeArquivo, String tipoEntidade);
 
-    default void substituir(String nomeArquivoAntigo, NovaFoto novaFoto) {
-		this.armazenar(novaFoto);
-		
-		if (nomeArquivoAntigo != null) {
-			this.remover(nomeArquivoAntigo);
-		}
-	}
+    default void substituir(String nomeArquivoAntigo, NovaFoto novaFoto, String tipoEntidade) {
+        this.armazenar(novaFoto, tipoEntidade);
 
-    InputStream recuperar(String nomeArquivo);
+        if (nomeArquivoAntigo != null) {
+            this.remover(nomeArquivoAntigo,tipoEntidade);
+        }
+    }
+
+    InputStream recuperar(String nomeArquivo, String tipoEntidade);
 
 
     @Builder
@@ -35,5 +35,5 @@ public interface FotoStorageSevice {
         private InputStream inputStream;
 
     }
-    
+
 }
