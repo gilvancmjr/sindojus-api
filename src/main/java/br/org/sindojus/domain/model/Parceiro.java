@@ -17,4 +17,7 @@ public class Parceiro {
     private String titulo;
     @Column(length = 10000)
     private String descricao;
+    private String nomeArquivo;
+    private String contentType;
+    private Long tamanho;
 }
